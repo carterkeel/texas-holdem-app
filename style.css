@@ -85,6 +85,10 @@ nav {
   white-space: normal;
 }
 
+.enter {
+    font-weight: bold;
+}
+
 .card-input {
   margin-bottom: 20px;
   align-items: center;
