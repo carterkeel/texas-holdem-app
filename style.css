@@ -14,25 +14,10 @@
   --color-button-bg: #1d3bd9;
   --color-button-text: #fff;
   --color-input-border: #ccc;
-}
-
-/* Dark mode palette */
-:root[data-theme="dark"] {
-  --color-footer-bg: #181a1b;
-  --color-footer-text: #eaeaea;
-  --color-link-hover: #888;
-  --color-premium: #3b59ee;
-  --color-strong: #1dbf73;
-  --color-speculative: #ffe066;
-  --color-weak: #ff5c5c;
-  --color-outline-premium: #3b59ee;
-  --color-outline-strong: #1dbf73;
-  --color-outline-speculative: #ffe066;
-  --color-outline-weak: #ff5c5c;
-  --color-outline-none: #888;
-  --color-button-bg: #3b59ee;
-  --color-button-text: #181a1b;
-  --color-input-border: #444;
+  --color-body-bg: #ffffff;
+  --color-instructions-bg: #f7f7f7;
+  --color-box-hover-bg: #fff;
+  --color-highlight-bg: #fff;
 }
 
 html, body {
@@ -52,7 +37,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--color-body-bg, #ffffff);
   font-family: 'Inter', Arial, sans-serif;
 }
 
@@ -65,7 +50,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 10px solid #3b59ee;
+  border-bottom: 10px solid var(--color-outline-premium);
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
 
@@ -83,7 +68,7 @@ nav {
 
 .intructions {
   padding: 20px;
-  background-color: #f7f7f7;
+  background-color: var(--color-instructions-bg, #f7f7f7);
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
   width: 240px;
@@ -174,7 +159,7 @@ span#cardMessage {
 }
 .box:hover {
   transform: translateY(-5px);
-  background: #fff;
+  background: var(--color-box-hover-bg, #fff);
   box-shadow: 0 10px 24px rgba(0,0,0,0.22);
 }
 .box.premium:hover {
@@ -203,6 +188,7 @@ span#cardMessage {
   align-items: center;
   justify-content: center;
   padding: 30px 0;
+  background: var(--color-footer-bg);
 }
 .footerLinks {
   margin-bottom: 12px;
@@ -232,7 +218,7 @@ span#cardMessage {
 }
 
 .highlight {
-  background: #fff !important;
+  background: var(--color-highlight-bg, #fff) !important;
   color: inherit !important;
   z-index: 2;
 }
