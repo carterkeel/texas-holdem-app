@@ -1,3 +1,55 @@
+.highlight {
+  background: #fff !important;
+  color: inherit !important;
+  z-index: 2;
+}
+.box.premium.highlight {
+  outline: 3px solid #1d3bd9;
+  color: #1d3bd9 !important;
+}
+.box.strong.highlight {
+  outline: 3px solid #0caf56;
+  color: #0caf56 !important;
+}
+.box.speculative.highlight {
+  outline: 3px solid #ffdd1f;
+  color: #ffdd1f !important;
+}
+.box.weak.highlight {
+  outline: 3px solid #e94e39;
+  color: #e94e39 !important;
+}
+.none.highlight {
+  outline: 3px solid #bbb;
+  color: #bbb !important;
+}
+.card-input {
+  margin-bottom: 20px;
+  align-items: center;
+}
+input#cardInput {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 60px;
+  text-align: center;
+}
+button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #1d3bd9;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 8px;
+}
+span#cardMessage {
+  margin-left: 16px;
+  font-weight: bold;
+  font-size: 1rem;
+}
 /* Optional hand strength color coding */
 .premium { background-color: #1d3bd9; }
 .strong { background-color: #0caf56; }
@@ -5,14 +57,81 @@
 .weak { background-color: #e94e39; }
 .none { background-color: none;}
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ffffff;
-  font-family: 'Inter', Arial, sans-serif;
+nav {
+  background: #1d3bd9;
+  padding: 18px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 10px solid #3b59ee;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
+
+
+.navbar {
+    color: white;
+}
+
+body {
+  padding-top: 70px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.staticElements {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.instruction {
+  display: flex;
+  align-items: center;
+}
+
+.instruction p {
+  max-width: 300px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.intructions {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.intruction text {
+    font-size: small;
+}
+
+.play {
+  font-weight: bold;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.premium.color-box { background-color: #1d3bd9; }
+.strong.color-box { background-color: #0caf56; }
+.speculative.color-box { background-color: #ffdd1f; }
+.weak.color-box { background-color: #e94e39; }
 
 .chart {
   display: grid;
