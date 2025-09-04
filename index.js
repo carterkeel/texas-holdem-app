@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			highlightCard();
 		}
 	});
+	const themeToggle = document.getElementById('themeToggle');
+	themeToggle.addEventListener('click', function() {
+		const root = document.documentElement;
+		if (root.getAttribute('data-theme') === 'dark') {
+			root.removeAttribute('data-theme');
+		} else {
+			root.setAttribute('data-theme', 'dark');
+		}
+	});
 });
 
 function highlightCard() {
