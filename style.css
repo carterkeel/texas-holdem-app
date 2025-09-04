@@ -46,7 +46,9 @@ button {
   margin-left: 8px;
 }
 span#cardMessage {
-  margin-left: 16px;
+  display: block;
+  margin-left: 0;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -70,6 +72,9 @@ nav {
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
 
+.enter {
+    font-weight: bold;
+}
 
 .navbar {
     color: white;
@@ -106,14 +111,12 @@ body {
 }
 
 .intructions {
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-}
-
-.intruction text {
-    font-size: small;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  width: 240px;
+  min-width: 220px;
 }
 
 .play {
@@ -155,10 +158,28 @@ body {
 
 .box:hover {
   transform: translateY(-5px);
-  background-color: #fff;
-  color: #ff6347;
-  border: 2px solid #ff6347;
+  background: #fff;
   box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.box.premium:hover {
+  outline: 3px solid #1d3bd9;
+  color: #1d3bd9 !important;
+}
+.box.strong:hover {
+  outline: 3px solid #0caf56;
+  color: #0caf56 !important;
+}
+.box.speculative:hover {
+  outline: 3px solid #ffdd1f;
+  color: #ffdd1f !important;
+}
+.box.weak:hover {
+  outline: 3px solid #e94e39;
+  color: #e94e39 !important;
+}
+.none:hover {
+  outline: 3px solid #bbb;
+  color: #bbb !important;
 }
 
 .speculative {

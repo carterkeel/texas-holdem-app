@@ -19,23 +19,32 @@ function highlightCard() {
 	if (input.length === 2 && cardMap[input[0]] && cardMap[input[1]]) {
 		let search = cardMap[input[0]] + ' - ' + cardMap[input[1]];
 		let searchAlt = cardMap[input[1]] + ' - ' + cardMap[input[0]];
-		document.querySelectorAll('.box').forEach(box => {
-			if (box.textContent === search || box.textContent === searchAlt) {
-				box.classList.add('highlight');
-				found = true;
-				if (box.classList.contains('premium')) message = 'PLAY in any position';
-				else if (box.classList.contains('strong')) message = 'PLAY in mid/late position';
-				else if (box.classList.contains('speculative')) message = 'PLAY in late position only';
-				else if (box.classList.contains('weak')) message = 'Unplayable cards';
-			}
-		});
-		document.querySelectorAll('.none').forEach(box => {
-			if (box.textContent === search || box.textContent === searchAlt) {
-				box.classList.add('highlight');
-				found = true;
-				message = 'Unplayable cards';
-			}
-		});
+		// Special cases for AA and 22
+		if (input === 'AA') {
+			found = true;
+			message = 'PLAY in any position';
+		} else if (input === '22') {
+			found = true;
+			message = 'Unplayable cards';
+		} else {
+			document.querySelectorAll('.box').forEach(box => {
+				if (box.textContent === search || box.textContent === searchAlt) {
+					box.classList.add('highlight');
+					found = true;
+					if (box.classList.contains('premium')) message = 'PLAY in any position';
+					else if (box.classList.contains('strong')) message = 'PLAY in mid/late position';
+					else if (box.classList.contains('speculative')) message = 'PLAY in late position only';
+					else if (box.classList.contains('weak')) message = 'Unplayable cards';
+				}
+			});
+			document.querySelectorAll('.none').forEach(box => {
+				if (box.textContent === search || box.textContent === searchAlt) {
+					box.classList.add('highlight');
+					found = true;
+					message = 'Unplayable cards';
+				}
+			});
+		}
 	}
 	document.getElementById('cardMessage').textContent = found ? message : 'Card not found.';
 }
