@@ -6,7 +6,7 @@
   --color-strong: #0caf56;
   --color-speculative: #ffdd1f;
   --color-weak: #e94e39;
-  --color-outline-premium: #1d3bd9;
+  --color-outline-premium: #080aa3;
   --color-outline-strong: #0caf56;
   --color-outline-speculative: #ffdd1f;
   --color-outline-weak: #e94e39;
@@ -50,7 +50,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 10px solid var(--color-outline-premium);
+  border-bottom: 5px solid var(--color-outline-premium);
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
 }
 
@@ -192,7 +192,6 @@ span#cardMessage {
   align-items: center;
   justify-content: center;
   padding: 30px 0;
-  background: var(--color-footer-bg);
 }
 .footerLinks {
   margin-bottom: 12px;
