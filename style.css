@@ -26,7 +26,10 @@ html, body {
 }
 
 @media (max-width: 1000px) {
-  html, body {
+  html {
+    overflow: visible;
+  }
+  body {
     overflow: auto;
   }
 }
@@ -247,7 +250,10 @@ span#cardMessage {
 }
 
 @media (max-width: 1000px) {
-  html, body {
+  html {
+    overflow: visible;
+  }
+  body {
     overflow: auto;
   }
   .staticElements {
