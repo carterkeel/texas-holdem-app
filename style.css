@@ -1,0 +1,47 @@
+/* Optional hand strength color coding */
+.premium { background-color: #1d3bd9; }
+.strong { background-color: #0caf56; }
+.speculative { background-color: #ffdd1f; }
+.weak { background-color: #e94e39; }
+.none { background-color: none;}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  grid-template-rows: repeat(12, 35px);
+  gap: 10px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+  color: #ff6347;
+  border: 2px solid #ff6347;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+.speculative {
+    color: #3a3933;
+}
