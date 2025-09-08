@@ -14,7 +14,7 @@
     <div class="staticElements">
         <div class="intructions">
             <div class="card-input">
-                <input type="text" id="cardInput" maxlength="2" placeholder="AA">
+                <input type="text" id="cardInput" maxlength="3" placeholder="AA">
                 <button id="checkCardBtn">Check</button>
                 <br>
                 <span id="cardMessage"></span>
@@ -36,6 +36,14 @@
                 <p>Unplayable cards</p>
             </div>
             <div class="instruction text">
+                <p><span class="enter">s</span> = Suited
+                </p>
+            </div>
+            <div class="instruction text">
+                <p><span class="enter">o</span> = Offsuit
+                </p>
+            </div>
+            <div class="instruction text">
                 <p>Enter your cards
                     in the textbox. Click check
                     or hit <span class="enter">enter</span> on your keyboard.
@@ -45,161 +53,190 @@
         
         <div class="chart">
             <!-- row 1 -->
-            <div class="box premium">A - K</div>
-            <div class="box premium">K - Q</div>
-            <div class="box strong">Q - J</div>
-            <div class="box strong">J - T</div>
-            <div class="box speculative">T - 9</div>
-            <div class="box speculative">9 - 8</div>
-            <div class="box speculative">8 - 7</div>
-            <div class="box weak">7 - 6</div>
-            <div class="box weak">6 - 5</div>
-            <div class="box weak">5 - 4</div>
-            <div class="box weak">4 - 3</div>
-            <div class="box weak">3 - 2</div>
-            <!-- row 2 -->
-            <div class="box premium">A - Q</div>
-            <div class="box premium">K - J</div>
-            <div class="box strong">Q - T</div>
-            <div class="box speculative">J - 9</div>
-            <div class="box speculative">T - 8</div>
-            <div class="box speculative">9 - 7</div>
-            <div class="box weak">8 - 6</div>
-            <div class="box weak">7 - 5</div>
-            <div class="box weak">6 - 4</div>
-            <div class="box weak">5 - 3</div>
-            <div class="box weak">4 - 2</div>
-            <div class="none"></div>
-            <!-- row 3 -->
-            <div class="box premium">A - J</div>
-            <div class="box strong">K - T</div>
-            <div class="box speculative">Q - 9</div>
-            <div class="box speculative">J - 8</div>
-            <div class="box weak">T - 7</div>
-            <div class="box weak">9 - 6</div>
-            <div class="box weak">8 - 5</div>
-            <div class="box weak">7 - 4</div>
-            <div class="box weak">6 - 3</div>
-            <div class="box weak">5 - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 4 -->
-            <div class="box premium">A - T</div>
-            <div class="box speculative">K - 9</div>
-            <div class="box weak">Q - 8</div>
-            <div class="box weak">J - 7</div>
-            <div class="box weak">T - 6</div>
-            <div class="box weak">9 - 5</div>
-            <div class="box weak">8 - 4</div>
-            <div class="box weak">7 - 3</div>
-            <div class="box weak">6 - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 5 -->
-            <div class="box speculative">A - 9</div>
-            <div class="box weak">K - 8</div>
-            <div class="box weak">Q - 7</div>
-            <div class="box weak">J - 6</div>
-            <div class="box weak">T - 5</div>
-            <div class="box weak">9 - 4</div>
-            <div class="box weak">8 - 3</div>
-            <div class="box weak">7 - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 6 -->
-            <div class="box speculative">A - 8</div>
-            <div class="box weak">K - 7</div>
-            <div class="box weak">Q - 6</div>
-            <div class="box weak">J - 5</div>
-            <div class="box weak">T - 4</div>
-            <div class="box weak">9 - 3</div>
-            <div class="box weak">8 - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 7 -->
-            <div class="box speculative">A - 7</div>
-            <div class="box weak">K - 6</div>
-            <div class="box weak">Q - 5</div>
-            <div class="box weak">J - 4</div>
-            <div class="box weak">T - 3</div>
-            <div class="box weak">9 - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 8 -->
-            <div class="box weak">A - 6</div>
-            <div class="box weak">K - 5</div>
-            <div class="box weak">Q - 4</div>
-            <div class="box weak">J - 3</div>
-            <div class="box weak">T - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 9 -->
-            <div class="box weak">A - 5</div>
-            <div class="box weak">K - 4</div>
-            <div class="box weak">Q - 3</div>
-            <div class="box weak">J - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 10 -->
-            <div class="box weak">A - 4</div>
-            <div class="box weak">K - 3</div>
-            <div class="box weak">Q - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 11 -->
-            <div class="box weak">A - 3</div>
-            <div class="box weak">K - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <!-- row 12 -->
-            <div class="box weak">A - 2</div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
-            <div class="none"></div>
+                <div class="box premium">A - A</div>
+                <div class="box premium">A - Ks</div>
+                <div class="box premium">A - Qs</div>
+                <div class="box premium">A - Js</div>
+                <div class="box premium">A - Ts</div>
+                <div class="box premium">A - 9s</div>
+                <div class="box speculative">A - 8s</div>
+                <div class="box speculative">A - 7s</div>
+                <div class="box speculative">A - 6s</div>
+                <div class="box speculative">A - 5s</div>
+                <div class="box speculative">A - 4s</div>
+                <div class="box speculative">A - 3s</div>
+                <div class="box speculative">A - 2s</div>
+                <!-- row 2 -->
+                <div class="box premium">K - Ao</div>
+                <div class="box premium">K - K</div>
+                <div class="box premium">K - Qs</div>
+                <div class="box premium">K - Js</div>
+                <div class="box premium">K - Ts</div>
+                <div class="box speculative">K - 9s</div>
+                <div class="box speculative">K - 8s</div>
+                <div class="box speculative">K - 7s</div>
+                <div class="box speculative">K - 6s</div>
+                <div class="box speculative">K - 5s</div>
+                <div class="box speculative">K - 4s</div>
+                <div class="box speculative">K - 3s</div>
+                <div class="box speculative">K - 2s</div>
+                <!-- row 3 -->
+                <div class="box premium">Q - Ao</div>
+                <div class="box premium">Q - Ko</div>
+                <div class="box premium">Q - Q</div>
+                <div class="box premium">Q - Js</div>
+                <div class="box premium">Q - Ts</div>
+                <div class="box speculative">Q - 9s</div>
+                <div class="box speculative">Q - 8s</div>
+                <div class="box speculative">Q - 7s</div>
+                <div class="box speculative">Q - 6s</div>
+                <div class="box speculative">Q - 5s</div>
+                <div class="box speculative">Q - 4s</div>
+                <div class="box speculative">Q - 3s</div>
+                <div class="box speculative">Q - 2s</div>
+                <!-- row 4 -->
+                <div class="box premium">J - Ao</div>
+                <div class="box weak">J - Ko</div>
+                <div class="box weak">J - Qo</div>
+                <div class="box premium">J - J</div>
+                <div class="box speculative">J - Ts</div>
+                <div class="box speculative">J - 9s</div>
+                <div class="box speculative">J - 8s</div>
+                <div class="box speculative">J - 7s</div>
+                <div class="box speculative">J - 6s</div>
+                <div class="box speculative">J - 5s</div>
+                <div class="box speculative">J - 4s</div>
+                <div class="box speculative">J - 3s</div>
+                <div class="box speculative">J - 2s</div>
+                <!-- row 5 -->
+                <div class="box weak">T - Ao</div>
+                <div class="box weak">T - Ko</div>
+                <div class="box weak">T - Qo</div>
+                <div class="box weak">T - Jo</div>
+                <div class="box premium">T - T</div>
+                <div class="box speculative">T - 9s</div>
+                <div class="box speculative">T - 8s</div>
+                <div class="box speculative">T - 7s</div>
+                <div class="box speculative">T - 6s</div>
+                <div class="box speculative">T - 5s</div>
+                <div class="box speculative">T - 4s</div>
+                <div class="box speculative">T - 3s</div>
+                <div class="box speculative">T - 2s</div>
+                <!-- row 6 -->
+                <div class="box weak">9 - Ao</div>
+                <div class="box weak">9 - Ko</div>
+                <div class="box weak">9 - Qo</div>
+                <div class="box weak">9 - Jo</div>
+                <div class="box weak">9 - To</div>
+                <div class="box premium">9 - 9</div>
+                <div class="box speculative">9 - 8s</div>
+                <div class="box speculative">9 - 7s</div>
+                <div class="box speculative">9 - 6s</div>
+                <div class="box speculative">9 - 5s</div>
+                <div class="box speculative">9 - 4s</div>
+                <div class="box speculative">9 - 3s</div>
+                <div class="box speculative">9 - 2s</div>
+                <!-- row 7 -->
+                <div class="box weak">8 - Ao</div>
+                <div class="box weak">8 - Ko</div>
+                <div class="box weak">8 - Qo</div>
+                <div class="box weak">8 - Jo</div>
+                <div class="box weak">8 - To</div>
+                <div class="box weak">8 - 9o</div>
+                <div class="box premium">8 - 8</div>
+                <div class="box speculative">8 - 7s</div>
+                <div class="box speculative">8 - 6s</div>
+                <div class="box speculative">8 - 5s</div>
+                <div class="box speculative">8 - 4s</div>
+                <div class="box speculative">8 - 3s</div>
+                <div class="box speculative">8 - 2s</div>
+                <!-- row 8 -->
+                <div class="box weak">7 - Ao</div>
+                <div class="box weak">7 - Ko</div>
+                <div class="box weak">7 - Qo</div>
+                <div class="box weak">7 - Jo</div>
+                <div class="box weak">7 - To</div>
+                <div class="box weak">7 - 9o</div>
+                <div class="box weak">7 - 8o</div>
+                <div class="box premium">7 - 7</div>
+                <div class="box speculative">7 - 6s</div>
+                <div class="box speculative">7 - 5s</div>
+                <div class="box speculative">7 - 4s</div>
+                <div class="box speculative">7 - 3s</div>
+                <div class="box speculative">7 - 2s</div>
+                <!-- row 9 -->
+                <div class="box weak">6 - Ao</div>
+                <div class="box weak">6 - Ko</div>
+                <div class="box weak">6 - Qo</div>
+                <div class="box weak">6 - Jo</div>
+                <div class="box weak">6 - To</div>
+                <div class="box weak">6 - 9o</div>
+                <div class="box weak">6 - 8o</div>
+                <div class="box weak">6 - 7o</div>
+                <div class="box strong">6 - 6</div>
+                <div class="box speculative">6 - 5s</div>
+                <div class="box speculative">6 - 4s</div>
+                <div class="box speculative">6 - 3s</div>
+                <div class="box speculative">6 - 2s</div>
+                <!-- row 10 -->
+                <div class="box weak">5 - Ao</div>
+                <div class="box weak">5 - Ko</div>
+                <div class="box weak">5 - Qo</div>
+                <div class="box weak">5 - Jo</div>
+                <div class="box weak">5 - To</div>
+                <div class="box weak">5 - 9o</div>
+                <div class="box weak">5 - 8o</div>
+                <div class="box weak">5 - 7o</div>
+                <div class="box weak">5 - 6o</div>
+                <div class="box strong">5 - 5</div>
+                <div class="box speculative">5 - 4s</div>
+                <div class="box speculative">5 - 3s</div>
+                <div class="box speculative">5 - 2s</div>
+                <!-- row 11 -->
+                <div class="box weak">4 - Ao</div>
+                <div class="box weak">4 - Ko</div>
+                <div class="box weak">4 - Qo</div>
+                <div class="box weak">4 - Jo</div>
+                <div class="box weak">4 - To</div>
+                <div class="box weak">4 - 9o</div>
+                <div class="box weak">4 - 8o</div>
+                <div class="box weak">4 - 7o</div>
+                <div class="box weak">4 - 6o</div>
+                <div class="box weak">4 - 5o</div>
+                <div class="box strong">4 - 4</div>
+                <div class="box speculative">4 - 3s</div>
+                <div class="box speculative">4 - 2s</div>
+                <!-- row 12 -->
+                <div class="box weak">3 - Ao</div>
+                <div class="box weak">3 - Ko</div>
+                <div class="box weak">3 - Qo</div>
+                <div class="box weak">3 - Jo</div>
+                <div class="box weak">3 - To</div>
+                <div class="box weak">3 - 9o</div>
+                <div class="box weak">3 - 8o</div>
+                <div class="box weak">3 - 7o</div>
+                <div class="box weak">3 - 6o</div>
+                <div class="box weak">3 - 5o</div>
+                <div class="box weak">3 - 4o</div>
+                <div class="box strong">3 - 3</div>
+                <div class="box speculative">3 - 2s</div>
+                <!-- row 13 -->
+                <div class="box weak">2 - Ao</div>
+                <div class="box weak">2 - Ko</div>
+                <div class="box weak">2 - Qo</div>
+                <div class="box weak">2 - Jo</div>
+                <div class="box weak">2 - To</div>
+                <div class="box weak">2 - 9o</div>
+                <div class="box weak">2 - 8o</div>
+                <div class="box weak">2 - 7o</div>
+                <div class="box weak">2 - 6o</div>
+                <div class="box weak">2 - 5o</div>
+                <div class="box weak">2 - 4o</div>
+                <div class="box weak">2 - 3o</div>
+                <div class="box strong">2 - 2</div>
+
+            
+            
         </div>
     </div>
 

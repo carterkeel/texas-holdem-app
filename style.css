@@ -5,6 +5,7 @@
   --color-premium: #1d3bd9;
   --color-strong: #0caf56;
   --color-speculative: #ffdd1f;
+  --color-speculative-text: #111;
   --color-weak: #e94e39;
   --color-outline-premium: #080aa3;
   --color-outline-strong: #0caf56;
@@ -147,8 +148,8 @@ span#cardMessage {
 
 .chart {
   display: grid;
-  grid-template-columns: repeat(12, 50px);
-  grid-template-rows: repeat(12, 35px);
+  grid-template-columns: repeat(13, 50px);
+  grid-template-rows: repeat(13, 35px);
   gap: 10px;
 }
 
@@ -157,13 +158,17 @@ span#cardMessage {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
   transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
+.box.speculative {
+  color: black;
+}
+
 .box:hover {
   transform: translateY(-5px);
   background: var(--color-box-hover-bg, #fff);
@@ -179,7 +184,7 @@ span#cardMessage {
 }
 .box.speculative:hover {
   outline: 3px solid var(--color-outline-speculative);
-  color: var(--color-speculative) !important;
+  color: var(--color-speculative-text) !important;
 }
 .box.weak:hover {
   outline: 3px solid var(--color-outline-weak);
