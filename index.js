@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function highlightCard() {
 	document.querySelectorAll('.box').forEach(box => box.classList.remove('highlight'));
 	document.querySelectorAll('.none').forEach(box => box.classList.remove('highlight'));
+	// Remove highlight from instructions
+	document.querySelectorAll('.instruction').forEach(inst => inst.classList.remove('active'));
 	const inputRaw = document.getElementById('cardInput').value.trim().toUpperCase();
 	let found = false;
 	let message = '';
@@ -40,6 +42,8 @@ function highlightCard() {
 		if (input === 'AA') {
 			found = true;
 			message = 'PLAY in any position';
+			// Highlight the first instruction (premium)
+			document.querySelectorAll('.instruction')[0].classList.add('active');
 			document.querySelectorAll('.box').forEach(box => {
 				let boxText = box.textContent.replace(/\s|-/g, '').toUpperCase();
 				if (boxText === 'AA') {
@@ -49,6 +53,8 @@ function highlightCard() {
 		} else if (input === '22') {
 			found = true;
 			message = 'Unplayable cards';
+			// Highlight the fourth instruction (weak)
+			document.querySelectorAll('.instruction')[3].classList.add('active');
 			document.querySelectorAll('.box').forEach(box => {
 				let boxText = box.textContent.replace(/\s|-/g, '').toUpperCase();
 				if (boxText === '22') {
@@ -63,10 +69,19 @@ function highlightCard() {
 				if (boxText === (search + suffix).toUpperCase() || boxText === (searchAlt + suffix).toUpperCase()) {
 					box.classList.add('highlight');
 					found = true;
-					if (box.classList.contains('premium')) message = 'PLAY in any position';
-					else if (box.classList.contains('strong')) message = 'PLAY in mid/late position';
-					else if (box.classList.contains('speculative')) message = 'PLAY in late position only';
-					else if (box.classList.contains('weak')) message = 'Unplayable cards';
+					if (box.classList.contains('premium')) {
+						message = 'PLAY in any position';
+						document.querySelectorAll('.instruction')[0].classList.add('active');
+					} else if (box.classList.contains('strong')) {
+						message = 'PLAY in mid/late position';
+						document.querySelectorAll('.instruction')[1].classList.add('active');
+					} else if (box.classList.contains('speculative')) {
+						message = 'PLAY in late position only';
+						document.querySelectorAll('.instruction')[2].classList.add('active');
+					} else if (box.classList.contains('weak')) {
+						message = 'Unplayable cards';
+						document.querySelectorAll('.instruction')[3].classList.add('active');
+					}
 				}
 			});
 			document.querySelectorAll('.none').forEach(box => {
@@ -91,10 +106,19 @@ function highlightCard() {
 				) {
 					box.classList.add('highlight');
 					found = true;
-					if (box.classList.contains('premium')) message = 'PLAY in any position';
-					else if (box.classList.contains('strong')) message = 'PLAY in mid/late position';
-					else if (box.classList.contains('speculative')) message = 'PLAY in late position only';
-					else if (box.classList.contains('weak')) message = 'Unplayable cards';
+					if (box.classList.contains('premium')) {
+						message = 'PLAY in any position';
+						document.querySelectorAll('.instruction')[0].classList.add('active');
+					} else if (box.classList.contains('strong')) {
+						message = 'PLAY in mid/late position';
+						document.querySelectorAll('.instruction')[1].classList.add('active');
+					} else if (box.classList.contains('speculative')) {
+						message = 'PLAY in late position only';
+						document.querySelectorAll('.instruction')[2].classList.add('active');
+					} else if (box.classList.contains('weak')) {
+						message = 'Unplayable cards';
+						document.querySelectorAll('.instruction')[3].classList.add('active');
+					}
 				}
 			});
 			document.querySelectorAll('.none').forEach(box => {
